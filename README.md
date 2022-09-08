@@ -16,7 +16,7 @@ To set up this project on your local machine,<br>
 
 1. Fork the repo and clone it to your local machine<br>
 
-2. In your terminal, navigate to the project root folder <code>property_review_api</code> create a virtual environment <code>python3 -m venv env</code> , then activate it <code>source env/bin/activate</code> (<i>for linux/unix</i>) or <code>env/scripts/activate</code> (<i>for windows</i>)<br>
+2. In your terminal, navigate to the project root folder <code>Apartment_Review_Api</code> create a virtual environment <code>python3 -m venv env</code> , then activate it <code>source env/bin/activate</code> (<i>for linux/unix</i>) or <code>env/scripts/activate</code> (<i>for windows</i>)<br>
 
 3. Install the project dependencies <code>pip install -r requirements.txt </code> <br>
 
@@ -28,5 +28,4 @@ To set up this project on your local machine,<br>
 
 <br><br>
 <strong>NOTE</strong><br>
-* Remember to generate a generate or set a new secret key in the <code>settings.py</code> file. you can quickly generate one in the terminal by running <code>python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
-</code>
+* Remember to generate a generate or set a new secret key in the <code>settings.py</code> file. you can quickly generate one in the terminal by running <code>python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'</code>
