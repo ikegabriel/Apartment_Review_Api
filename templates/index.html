@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+    <form action="" method="post">
+        {%csrf_token%}
+        <input type="text" name="" id="property_address"><br>
+        <input type="file" accept="image/" name="" id="property_image"><br>
+        <input type="file" name="" id="property_video"><br>
+        <textarea name="" id="apartment_review" cols="30" rows="10"></textarea><br>
+        <input type="file" accept="image/" name="" id="image1"><br>
+        <textarea name="" id="amenities_review" cols="30" rows="10"></textarea><br>
+        <input type="file" name="" accept="image/" id="image2"><br>
+        <textarea name="" id="landlord_review" cols="30" rows="10"></textarea><br>
+        <input type="file" name="" id="image3"><br>
+        <input type="text" name="" id="country"><br>
+        <input type="text" name="" id="state"><br>
+        <input type="text" name="" id="city">
+        <input type="hidden" id="token" value="cbe26ec60f186b6be5389eb114cd91e58b78d711">
+        <button id="submit">Submit</button>
+    </form>
+
+    <script>
+        $('#submitButton').on('click', function(event){
+            event.preventDefault();
+
+            $.ajax({
+                url: "http://127.0.0.1:8000/api/create/",
+                type: "POST",
+                data: {
+                    property_address: $('#property_address').val(),
+                    property_image: $('#property_image').val(),
+                    property_video: $('#property_video').val(),
+                    apartment_review: $('#apartment_review').val(),
+                    image1: $('#image1').val(),
+                    amenities_review: $('#amenities_review').val(),
+                    image2: $('#image2').val(),
+                    landlord_review: $('#landlord_review').val(),
+                    image3: $('#image3').val(),
+                    country: $('#country').val(),
+                    state: $('#state').val(),
+                    city: $('#city').val(),
+                },
+                contentType: "application/json",
+                headers: {
+                    "Authorization": "Token " + $('#token').val()
+                },
+                async: true
+            })
+        });
+    </script>
+</body>
+</html>
