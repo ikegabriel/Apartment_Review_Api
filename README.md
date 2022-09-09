@@ -2,9 +2,8 @@
 An Apartment review api to help people rate, share and express their thoughts and experiences on previously occupied apartments.
 
 # Technology
- <img src='https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue'><br>
- <img src='https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green'><br>
- <img src='https://img.shields.io/badge/django%20rest-ff1709?style=for-the-badge&logo=django&logoColor=white'>
+ <img src='https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue'> <img src='https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green'>
+<img src='https://img.shields.io/badge/django%20rest-ff1709?style=for-the-badge&logo=django&logoColor=white'>
 
 # Database ERD
 https://drawsql.app/teams/gabriels-team-1/diagrams/apartment-review-api
